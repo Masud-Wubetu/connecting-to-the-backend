@@ -1,9 +1,10 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 
 function App() {
   const ref = useRef<HTMLInputElement>(null);
-
-  if(ref.current)  ref.current.focus;
+  useEffect(() => {
+    if(ref.current)  ref.current.focus;
+  });
  
   return (
     <div>
